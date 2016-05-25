@@ -4,7 +4,7 @@
 > A simple web-form for an online gym signup   
 > Built using html5 and css  
 
-Download and run!
+Download and run!  
 This project does not need to be hosted on a server
 to view simply run gym_membership.html
 * Note: this is a very basic site  
