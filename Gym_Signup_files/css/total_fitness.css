@@ -1,0 +1,214 @@
+body
+{
+	background-color: #AFCCEB;
+	font-family: times,serif;
+	font-size: 1.0em;
+}
+
+/* form-title styling */
+h1
+{
+	color: #4D0000;
+	text-align: center;
+	text-shadow: 5px 5px 5px #AAA;
+}
+
+/* red-text */
+.redstar
+{
+	color: red;
+}
+
+br
+{
+	clear: left;
+}
+
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
+/* main form styling */
+.gympic, .gympicR
+{
+	float: left;
+	width: 12%;
+	border-radius: 1.1em;
+	box-shadow: 3px 3px 6px #777;
+}
+
+.gympicR
+{
+	float: right;
+}
+
+#midtext
+{
+	text-align: center;
+	margin-top: 2em;
+	margin-bottom:0em;
+}
+
+form
+{
+	background-color: #BEDDBE;
+	width: 70%;
+	margin: 0 auto;
+	padding: 1em;
+	border: 3px solid blue;
+	box-shadow: 10px 10px 10px #777;
+	border-radius: 0.5em;
+}
+
+legend
+{
+	color: white;
+	border: 3px outset #62718E;
+	background-color: #4E234E;
+	padding: 0.3em 1em ;
+	border-radius: 0.3em;
+}
+
+fieldset
+{
+	border: 3px inset #62718E;
+	background-color: #C7C1E8;
+	border-radius: 0.3em;
+}
+
+fieldset:hover
+{
+	box-shadow: 3px 3px 6px #777;
+	background-color: #CBCBF5;
+}
+
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
+/* input sizing and colouring */
+input[type="text"],input[type="tel"],input[type="password"],
+input[type="email"],input[type="date"], select, #comments, option
+{
+	width: 40%;
+	background-color: pink;
+}
+
+input:focus, #comments:focus, #gen_health:focus, #gen_health select:focus
+{
+	background-color: #F9FCB8;
+}
+
+select
+{
+	width: 21%;
+	margin-left: 24%;
+}
+
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
+/* personal details 2-col layout */
+#leftCol, #rightCol
+{
+	display: block;
+	float: left;
+	width: 50%;
+}
+
+#rightCol
+{
+	float: right;
+}
+
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
+/* label styling and spacing */
+label
+{
+	color: blue;
+	font-weight: bold;
+	text-align: right;
+	padding-right: 0.6em;
+	display: block;
+	float: left;
+	width: 45%;
+	margin-bottom: -0.5em;
+}
+.labelA
+{
+	line-height: 1.8em;	
+}
+#gender
+{
+	padding-top: 0.25em;
+	padding-top: 0.25em;
+}
+
+/* smaller label width */
+#category, #term
+{
+	width: 20%;
+}
+
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
+/* button styling */
+#submit,#reset
+{
+	color: white;
+	background-color: #0508A7;
+	border: 2px outset #62718E;
+	border-radius: 1em;
+	width: 15%;
+	padding-top: 0.3em;
+	padding-bottom: 0.3em;
+}
+
+#submit:hover, #reset:hover
+{
+	color: #DDDDEE;
+	background-color: blue;
+	border: 2px inset #62718E;
+}
+
+#reset
+{
+	margin-left: 8%;
+}
+
+#submit
+{
+	margin-left: 31%;
+}
+
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
+#comments, #upload
+{
+	margin-left: 22%;
+}
+
+/* credit card logo image sizing and spacing */
+.creditImg
+{
+	width: 12%;
+	margin-left: 10%;
+	box-shadow: 3px 3px 6px;
+}
+
+.padBottom
+{
+	padding-bottom: 1.5em;
+}
+
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
+/* checkbox spacing */
+.checkLeft, .checkRight
+{
+	display: block;
+	float: left;
+	width: 22.5%;
+}
+
+.checkLeft
+{
+	margin-left: 22%;
+}
+
+/* radio-button spacing */
+.radio
+{
+	display: block;
+	float: left;
+	width: 15%;
+}

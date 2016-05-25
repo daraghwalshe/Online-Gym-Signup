@@ -1,0 +1,339 @@
+
+<!DOCTYPE html>
+
+<html>
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<!-- document head -->
+<head>
+	<meta charset="utf-8">
+	<title>
+		Gym Membership form
+	</title>
+	<style>
+		@import"css/total_fitness.css";
+	</style>
+
+	<script type="text/javascript">
+
+		/* function to check if the passwords match*/
+		function validateForm()
+		{
+			var pass1 = document.getElementById("password").value;
+			var pass2 = document.getElementById("password2").value;
+			var name = document.getElementById("user").value;
+
+			if(pass1 != pass2)
+			{
+				alert("Sorry " + name + " your passwords do not match");
+				document.gymMembership.password.focus();
+				return false;
+			}
+		}
+
+	</script>
+
+</head>
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<!--  start of body  -->
+<body>
+
+<form action="confirm.html" method="post" name="gymMembership"
+onSubmit="return validateForm()">
+
+	<img src="images/gym1.jpg" alt="gym logo" class="gympic">
+	<img src="images/gym2.jpg" alt="gym logo" class="gympicR">
+	<h1>Total Fitness</h1>
+
+	<div id="midtext">
+	<strong>Complete the form and press the send button</strong>
+	&nbsp;&nbsp;&nbsp;
+	<span class="redstar">* Denotes a required field</span>
+	</div>
+
+	<br><br>
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<!-- personal details section - left column -->
+	<fieldset>
+		<legend>Personal Details</legend>
+
+		<div id="leftCol">
+
+		<p>
+			<label for="user" class="labelA">Name :</label>
+			<input type="text"  name="user" id = "user" required
+			placeholder = "enter full name" autofocus>
+			<span class="redstar"> *</span><br>
+		</p>
+
+		<p>
+			<label for="phone" class="labelA">Phone Number :</label>
+			<input type="tel"  name="phone" id = "phone" required
+			pattern="[0-9]{7}"
+			placeholder="1234567"
+			title="enter 7 digits">
+			<span class="redstar"> *</span><br>
+		</p>
+
+		<p>
+			<label class="labelA">Date of Birth :</label>
+			<input type="date" name="dob" required>
+			<span class="redstar"> *</span><br>
+		</p>
+
+		<p>
+			<label for="password" class="labelA">Password :</label>
+			<input type="password" size="15" name="password" id="password"
+			pattern="[a-z,A-Z,0-9]{6}" required
+			title="6 characters, may contain letters or numbers">
+			<span class="redstar"> *</span>
+		</p>
+
+		</div>
+
+		<!-- personal details section - right column -->
+		<div id="rightCol">
+
+		<p>
+			<label for="address" class="labelA">Address :</label>
+			<input type="text"  name="address" id = "address" required
+			placeholder = "enter your postal address">
+			<span class="redstar"> *</span><br>
+		</p>
+
+		<p>
+			<label for="email" class="labelA">E-Mail :</label>
+			<input type="email"  name="email" id = "email" required
+			placeholder="jbloggs@gmail.com">
+			<span class="redstar"> *</span><br>
+		</p>
+
+		<p id="gender">
+		<label>Gender :</label>
+			<input type="radio" name="gender" value = "male">Male
+			<input type="radio" name="gender" value = "female" required>Female
+			<span class="redstar"> *</span><br>
+		</p>
+
+		<p>
+			<label for="password2" class="labelA">Reenter Password :</label>
+			<input type="password" size="15" name="password2" id="password2"
+			pattern="[a-z,A-Z,0-9]{6}" required
+			title="re-enter your password">
+			<span class="redstar"> *</span>
+		</p>
+
+		</div>
+
+	</fieldset>
+	<br>
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<!-- drop-down menu -->
+	<fieldset class="padBottom">
+		<legend>Health/Physical Condition</legend>
+
+		<select name="gen_health" id="gen_health">
+					<option value="">select</option>
+					<option value="unfit">unfit</option>
+					<option value="fit">fit</option>
+					<option value="healthy">healthy</option>
+					<option value="unwell">unwell</option>
+					<option value="overweight">overweight</option>
+		</select>
+
+	</fieldset>
+	<br>
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<!-- membership section -->
+	<fieldset>
+		<legend>Membership</legend>
+
+		<p><!-- top row -->
+		<label id="category">Category</label>
+			<span class="radio">
+				<input type="radio" name="category" value="student">
+				Student
+			</span>
+			<span class="radio">
+				<input type="radio" name="category" value="adult">
+				Adult
+			</span>
+			<span class="radio">
+				<input type="radio" name="category" value="senoir">
+				Senoir
+			</span>
+			<span class="radio">
+				<input type="radio" name="category" value="off_peak">
+				Off-peak
+			</span>
+		</p>
+		<br>
+
+		<p><!-- bottom row -->
+		<label id="term">Term</label>
+			<span class="radio">
+				<input type="radio" name="term" value="3_months">
+				3 months
+			</span>
+			<span class="radio">
+				<input type="radio" name="term" value="6_months">
+				6 months
+			</span>
+			<span class="radio">
+				<input type="radio" name="term" value="9_months">
+				9 months
+			</span>
+			<span class="radio">
+				<input type="radio" name="term" value="12_months">
+				12 months
+			</span>
+		</p>
+		<br><br>
+
+	</fieldset>
+	<br>
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<!-- customer fitness goals -->
+	<fieldset>
+		<legend>Exercise Aims</legend>
+
+			<!-- top row -->
+			<span class="checkLeft">
+				<input type="checkbox" name="health" value="health" id="health">
+				Health
+			</span>
+			<span class="checkRight">
+				<input type="checkbox" name="energy" value="energy" id="energy">
+				Energy
+			</span>
+			<span class="checkRight">
+				<input type="checkbox" name="fitness" value="fitness" id="fitness">
+				Fitness
+			</span>
+
+		<br>
+			<!-- bottom row -->
+			<span class="checkLeft">
+				<input type="checkbox" name="toning" value="toning" id="toning">
+				Toning
+			</span>
+			<span class="checkRight">
+				<input type="checkbox" name="wt_loss" value="wt_loss" id="wt_loss">
+				Weight loss
+			</span>
+			<span class="checkRight">
+				<input type="checkbox" name="rehab" value="rehab" id="rehab">
+				Rehab
+			</span>
+
+	</fieldset>
+	<br>
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<!-- facilities customer may be interested in  -->
+	<fieldset>
+		<legend>Are you interested in other services?</legend>
+
+			<!-- top row -->
+			<span class="checkLeft">
+				<input type="checkbox" name="none" value="none" id="none">
+				None
+			</span>
+			<span class="checkRight">
+				<input type="checkbox" name="massage" value="massage" id="massage">
+				Massage
+			</span>
+			<span class="checkRight">
+				<input type="checkbox" name="p_training" value="p_training" id="p_training">
+				Personal training
+			</span>
+
+		<br>
+			<!-- bottom row -->
+			<span class="checkLeft">
+				<input type="checkbox" name="nutrition" value="nutrition" id="nutrition">
+				Nutrition
+			</span>
+			<span class="checkRight">
+				<input type="checkbox" name="steam_room" value ="steam_room" id="steam_room">
+				Steam room
+			</span>
+			<span class="checkRight">
+				<input type="checkbox" name="fitness_classes" value="fitness_classes" id="fitness_classes">
+				Fitness classes
+			</span>
+
+	</fieldset>
+	<br>
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<!-- user chooses payment method -->
+	<fieldset>
+		<legend>Payment Method</legend>
+
+		<p>
+
+			<img src="images/visa.jpg" alt="visa logo"  class="creditImg">
+			<input type="radio" name="payment" value="visa">
+			Visa
+
+			<img src="images/mastercard.jpg" alt="mastercard logo"  class="creditImg">
+			<input type="radio" name="payment" value="mastercard">
+			Mastercard
+
+			<img src="images/paypal.jpg" alt="paypal logo"  class="creditImg">
+			<input type="radio" name="payment" value="paypal">
+			Paypal
+
+		</p>
+
+	</fieldset>
+	<br>
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<!-- customer comments section -->
+	<fieldset class="padBottom">
+		<legend>Other Details</legend>
+
+		<textarea rows="2" cols="40" name="comments" id="comments">
+		</textarea>
+
+	</fieldset>
+	<br>
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<!-- input to upload a file -->
+	<fieldset class="padBottom">
+		<legend>Upload a photo of yourself</legend>
+
+		<span class="button">
+		<input type="file" name="file" id="upload">
+		</span>
+
+	</fieldset>
+	<br>
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+<!-- buttons to submit or reset form -->
+	<div id="buttons">
+		<span class="button">
+		<input type="submit" name="submit" id="submit" value="Send"
+		onClick="validate()">
+		</span>
+
+		<span class="button">
+		<input type="reset" name="reset" id="reset" value="Clear">
+		</span>
+	</div>
+
+
+</form>
+
+</body>
+
+</html>
