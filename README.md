@@ -1,6 +1,6 @@
 # Online-Gym-Signup
 
-####First-Year web-form project :mortar_board: :one:
+### First-Year web-form project :mortar_board: :one:
 > A simple web-form for an online gym signup   
 > Built using html5 and css  
 
